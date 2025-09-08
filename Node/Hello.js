@@ -1,14 +1,10 @@
-//http 모듈 로딩
-
 let http = require("http");
 
-// http 서버를 listen 상태로 8000 포트를 사용하여 만듬
-http.createServer(function (requset, response)
+http.createServer(function ( request, response)
 {
-    // response HTTP 타입 헤더를 정의
-    response.writeHead(200, {'Content-Type' : 'text/plain'})
+    response.writeHead(200, {'Content-Type' : 'text/plain'});
 
-    response.end("Hello World")
+    response.end("Hello world");
 
 }).listen(8000);
 
