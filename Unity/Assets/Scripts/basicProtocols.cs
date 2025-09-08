@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class basicProtocols
 {
-
     public class Packets
     {
 

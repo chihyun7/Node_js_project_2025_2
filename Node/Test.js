@@ -1,4 +1,4 @@
-const {add} = require("./Math.js");
+const {add} = require("./math.js");
 
 //변수 선언
 let num = 42;

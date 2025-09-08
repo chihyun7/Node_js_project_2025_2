@@ -7,7 +7,7 @@ app.get('/' , function(req, res){       // 기본 라우터에서 hello world �
 
 
 app.get('/about' , function(req, res){       // about에서 about.data를 반환한다
-    res.send('Player data 1111');
+    res.send('about data');
 });
 
 app.listen(3000, function(){

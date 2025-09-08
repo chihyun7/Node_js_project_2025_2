@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 public class basicMain : MonoBehaviour
 {
     public Button Hello;
-    public string host;
+    public string host;                 //ip 주소 로컬에서 127,0,0,1
     public int port;
     public string route;
 
@@ -32,13 +32,12 @@ public class basicMain : MonoBehaviour
 
         if (webRequest.result == UnityWebRequest.Result.ConnectionError
             || webRequest.result == UnityWebRequest.Result.ProtocolError)
-            {
-            Debug.Log("네투워크 환경이 좋지 않아서 통신불가");
-    }
-    else
+        {
+            Debug.Log("네트워크 환경이 좋지 않아서 통신 불가");
+        }
+        else
         {
             callback(webRequest.downloadHandler.text);
         }
     }
-
 }

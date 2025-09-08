@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: e6f05b7e0d16b6b4ca7bf776a1b62b57
+  productGUID: 2df9d782aeedbae44b8669dc6085c3bd
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: gggggggg
+  productName: basso
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -681,14 +681,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: gggggggg
+  metroPackageName: basso
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: gggggggg
+  metroApplicationDescription: basso
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -758,10 +758,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: c9805049-7bd0-42bb-b1c1-8a7c48909c14
+  cloudProjectId: 923f9a70-6a8a-423c-a17e-035b36c0df86
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: gggggggg
+  projectName: basso
   organizationId: qkrclguswkd1603
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
