@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Protocols : MonoBehaviour
+{
+    public class Packets
+    {
+        public class common
+        {
+            public int cmd;             // 명령 숫자 표사
+            public string message;      // 메세지
+
+        }
+
+        public class  req_data : common
+        {
+            public int id;              // id를 받는다
+            public string data;         // 전달 데이터
+        }
+
+        public class res_data : common
+        {
+            public req_data[] result;
+        }
+    }
+}
