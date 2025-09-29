@@ -69,7 +69,7 @@ public class GameAPI : MonoBehaviour
                     {
                         metal = Convert.ToInt32(responseData["metal"]),
                         crystal = Convert.ToInt32(responseData["crystal"]),
-                        deuterium = Convert.ToInt32(responseData["deyterium"])
+                        deuterium = Convert.ToInt32(responseData["deuterium"])
                     };
                     onSuccess?.Invoke(playermode);
                     Debug.Log("Login successful");
