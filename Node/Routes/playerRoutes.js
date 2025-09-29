@@ -1,8 +1,10 @@
 const express = require('express');
-const fd = require('fs');
+const fs = require('fs');
 const router = express.Router();
 
 // 초기자원 설정
+
+const resourceFilePath = 'resources.json'
 
 const initalResources = {
     metal : 500,
@@ -18,7 +20,7 @@ router.post('/register', (req, res) => {
 
     const {name, password} = req.body;
 
-    if(global.player[name])
+    if(global.players[name])
     {
         return resizeBy.status(400).send({messager : '이미 등록된 사용자입니다. '});
     }
@@ -27,7 +29,7 @@ router.post('/register', (req, res) => {
         password : password,
         resources : {
             metal : 500,
-            ctystal : 300,
+            crystal : 300,
             deuterium : 100
         },
         planets:[]
@@ -51,6 +53,8 @@ router.post('/login', (req, res) => {
         return res.status(401).send({message : '비밀번호가 틀렸습니다.'});
     }
 
+    const player = global.players[name];
+
     //응답 데이터
     const reqponsePayLoad = {
         playerName: player.playerName,
@@ -60,8 +64,13 @@ router.post('/login', (req, res) => {
     }
 
     console.log("Login response playload : ", reqponsePayLoad);
-    res.end(reqponsePayLoad);
+    res.send(reqponsePayLoad);
 
-    });
+});
+
+function saveResources()
+{
+    fs.writeFileSync(resourceFilePath, JSON.stringify(global.players, null, 2));
+}
 
 module.exports = router;

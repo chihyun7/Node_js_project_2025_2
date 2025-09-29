@@ -1,6 +1,6 @@
-const espress = require('express');
+const express = require('express');
 const fs = require('fs');       // 파일 시스템 헤더에 추가
-const playerRoutes = require('/routes/playerRoutes');
+const playerRoutes = require('./Routes/playerRoutes');
 const app = express();
 const port = 4000;
 
@@ -24,12 +24,8 @@ function loadResource()
     }
 }
 
-function saveResources()
-{
-    fs.writeFileSync(resourceFilePath, JSON.stringify(global.players, null, 2));
-}
 
 app.listen(port, ()=>
 {
-    console.log('서버거 http://localhost:${port}에서 실행 중 입니다.');
+    console.log(`서버거 http://localhost:${port}에서 실행 중 입니다.`);
 })
