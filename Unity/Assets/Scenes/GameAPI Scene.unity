@@ -237,7 +237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 0, y: -4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &81388905
@@ -669,15 +669,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46934ff5479de7459316a5e99870afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNameText: {fileID: 0}
-  metalText: {fileID: 0}
-  crystalText: {fileID: 0}
-  deuteriumText: {fileID: 0}
-  playerNameInput: {fileID: 0}
-  registerButton: {fileID: 0}
-  loginButton: {fileID: 0}
-  collectButton: {fileID: 0}
-  developButton: {fileID: 0}
+  playerNameText: {fileID: 1663710577}
+  metalText: {fileID: 1662006241}
+  crystalText: {fileID: 376556307}
+  deuteriumText: {fileID: 1266774364}
+  playerNameInput: {fileID: 1304010852}
+  registerButton: {fileID: 1800253035}
+  loginButton: {fileID: 1917091167}
+  collectButton: {fileID: 81388905}
+  developButton: {fileID: 1491414491}
   progressBar: {fileID: 0}
 --- !u!4 &593593331
 Transform:
@@ -1227,7 +1227,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 0, y: -32.999996}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491414491
@@ -1831,7 +1831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 0, y: 23}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1917091167
