@@ -1138,6 +1138,7 @@ MonoBehaviour:
   usernameInput: {fileID: 726144431}
   passwordInput: {fileID: 673413302}
   registerButton: {fileID: 391922650}
+  loginBtn: {fileID: 1433926940}
   statusText: {fileID: 1552841025}
 --- !u!114 &1192169050
 MonoBehaviour:
