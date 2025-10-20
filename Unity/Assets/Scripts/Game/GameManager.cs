@@ -5,17 +5,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameView gameView;
-    public GameController GameController;
+    public GameController gameController;   
+
     // Start is called before the first frame update
     void Start()
     {
-        GameController = gameView.gameObject.AddComponent<GameController>();
-        GameController.gameView = gameView;
+        gameController = gameView.gameObject.AddComponent<GameController>();
+        gameController.gameView = gameView;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

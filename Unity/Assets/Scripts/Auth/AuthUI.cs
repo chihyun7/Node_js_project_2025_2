@@ -9,7 +9,7 @@ public class AuthUI : MonoBehaviour
     public InputField passwordInput;
 
     public Button registerButton;
-    public Button loginBtn;
+    public Button loginButton;
 
     public Text statusText;
 
@@ -20,7 +20,7 @@ public class AuthUI : MonoBehaviour
     {
         authManager = GetComponent<AuthManager>();
         registerButton.onClick.AddListener(OnRegisterClick);
-        loginBtn.onClick.AddListener(OnLoginClick);
+        loginButton.onClick.AddListener(OnLoginClick);
     }
 
     private void OnRegisterClick()
@@ -33,17 +33,19 @@ public class AuthUI : MonoBehaviour
         StartCoroutine(LoginCoroutine());
     }
 
-    private IEnumerator RegisterCoroutine()
-    {
-        statusText.text = "회원 가입 중 ....";
-        yield return StartCoroutine(authManager.Register(usernameInput.text, passwordInput.text));
-        statusText.text = "회원 가입 성공, 로그인 해주세요";
-    }
-
     private IEnumerator LoginCoroutine()
     {
         statusText.text = "로그인 중 ....";
         yield return StartCoroutine(authManager.Login(usernameInput.text, passwordInput.text));
         statusText.text = "로그인 성공";
     }
+
+
+    private IEnumerator RegisterCoroutine()
+    {
+        statusText.text = "회원 가입 중 ....";
+        yield return StartCoroutine(authManager.Register(usernameInput.text, passwordInput.text));
+        statusText.text = "회원 가입 성공 , 로그인 해주세요";
+    }
+
 }

@@ -11,7 +11,7 @@ public class PlanetModel
     public int metal;
     public int crystal;
     public int deuterium;
-    
+
     public PlanetModel(int id, string name)
     {
         this.id = id;
@@ -20,5 +20,4 @@ public class PlanetModel
         this.crystal = 300;
         this.deuterium = 100;
     }
-
 }

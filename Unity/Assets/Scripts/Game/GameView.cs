@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class GameView : MonoBehaviour
 {
+    //UI 요소
     public Text playerNameText;
     public Text metalText;
     public Text crystalText;
@@ -17,23 +18,26 @@ public class GameView : MonoBehaviour
     public Button collectButton;
     public Button developButton;
     public Slider progressBar;
+    
 
     public void SetPlayerName(string name)
     {
-        playerNameText.text = name;
+        playerNameText.text = name; 
     }
 
     public void UpdateResources(int metal, int crystal, int deuterium)
     {
-        metalText.text = $"Metal : {metal}";
-        crystalText.text = $"Metal : {crystal}";
-        deuteriumText.text = $"Metal : {deuterium}";
+        metalText.text = $"Metal : {metal}";    
+        crystalText.text = $"Crystal : {crystal}";
+        deuteriumText.text = $"deuterium : {deuterium}";
     }
 
     public void UpdateProgressBar(float value)
     {
-        progressBar.value = value;
+        progressBar.value = value;  
     }
+
+    //버튼 클릭 리스너 설정 함수
 
     public void SetRegisterButtonListener(UnityAction action)
     {

@@ -9,21 +9,23 @@ using Newtonsoft.Json;
 
 public class AuthManager : MonoBehaviour
 {
-    private const string SERVER_URL = "http://localhost:3000";
-    private const string ACCESS_TOKEN_PREFS_KEY = "AccessToken";
-    private const string REFRESH_TOKEN_PREFS_KEY = "RefreshToken";
+    //서버 URL 및 PlayerPrefs 키 상수 정의
+    private const string SERVER_URL = "http://localhost:4000";
+    private const string ACCESS_TOKEN_PREFS_KEY = "AccessToekn";
+    private const string REFRESH_TOKEN_PREFS_KEY = "RefreshToekn";
     private const string TOKEN_EXPIRY_PREFS_KEY = "TokenExpiry";
 
+    //토큰 및 만료 시간 저장 변수
     private string accessToken;
     private string refreshToken;
     private DateTime tokenExpiryTime;
 
-    // Start is called before the first frame update
     void Start()
     {
         LoadTokenFromPrefs();
     }
 
+    //PlayerPrefs 에서 토큰 정보 로드
     private void LoadTokenFromPrefs()
     {
         accessToken = PlayerPrefs.GetString(ACCESS_TOKEN_PREFS_KEY, "");
@@ -32,10 +34,11 @@ public class AuthManager : MonoBehaviour
         tokenExpiryTime = new DateTime(expiryTicks);
     }
 
+    //PlayerPrefs 에 토큰 정보 저장
     private void SaveTokenToPrefs(string accessToken, string refreshToken, DateTime expiryTime)
     {
         PlayerPrefs.SetString(ACCESS_TOKEN_PREFS_KEY, accessToken);
-        PlayerPrefs.SetString(REFRESH_TOKEN_PREFS_KEY, refreshToken);
+        PlayerPrefs.SetString(REFRESH_TOKEN_PREFS_KEY , refreshToken);
         PlayerPrefs.SetString(TOKEN_EXPIRY_PREFS_KEY, expiryTime.Ticks.ToString());
 
         this.accessToken = accessToken;
@@ -43,19 +46,7 @@ public class AuthManager : MonoBehaviour
         this.tokenExpiryTime = expiryTime;
     }
 
-    [System.Serializable]
-    public class LoginResponse
-    {
-        public string accessToken;
-        public string refreshToken;
-    }
-
-    [System.Serializable]
-    public class RefreshTokenResponse
-    {
-        public string accessToken;
-    }
-
+    //사용자 등록 코루틴
     public IEnumerator Register(string username, string password)
     {
         var user = new { username, password };
@@ -81,6 +72,7 @@ public class AuthManager : MonoBehaviour
         }
     }
 
+    //사용자 등록 코루틴
     public IEnumerator Login(string username, string password)
     {
         var user = new { username, password };
@@ -108,10 +100,19 @@ public class AuthManager : MonoBehaviour
             }
         }
     }
+}
 
-    // Update is called once per frame
-    void Update()
-    {
+//로그인 응답 데이터 구조
+[System.Serializable]
+public class LoginResponse
+{
+    public string accessToken;
+    public string refreshToken;
+}
 
-    }
+//토큰 갱신 응답 데이터 구조
+[System.Serializable]
+public class RefreshTokenResponse
+{
+    public string accessToekn;
 }
